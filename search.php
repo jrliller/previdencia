@@ -40,13 +40,16 @@ if(!isset($_SESSION['user']) && empty($_SESSION['user'])) {
 			</ul>
         </nav>
 
-        <?php
+<?php
     if(!empty($_POST['cpf'])) {
     $cpf = $_POST['cpf'];
     $info = $pensioner->getPensioner($cpf);
-    } 
-  
+    } else {
+        echo "PENSIONISTA NÃO CADASTRADO2!";
+        exit;
+    }
 ?>
+
 <table class="listing">
 
     <tr>

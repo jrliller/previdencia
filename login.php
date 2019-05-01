@@ -30,7 +30,6 @@ session_start();
 				<!-- <input type="text" pattern="[0-9]{3}" name="user" placeholder="Digite seu Usuário"> -->
 				<input type="text" name="user" placeholder="Digite seu Usuário">
 				<input type="password" name="senha" placeholder="Digite sua senha">
-
 				<input class="botao" type="submit" value="ACESSAR">
 				<a class="botao2"  href="esqueci.php">Esqueci minha senha</a>
 			</form>

@@ -16,7 +16,7 @@ if(!isset($_SESSION['user']) && empty($_SESSION['user'])) {
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div class="container">
+
 	<div class="top">
 		<div class="left_side">
 			<div class="logo"><img src="logo.png"></div>
@@ -34,15 +34,16 @@ if(!isset($_SESSION['user']) && empty($_SESSION['user'])) {
                 <li><a href="logout.php">Sair</a></li>
 			</ul>
         </nav>
-<div class="bckgrd">
-    <div class="form-inputs">
+
+<div class="container">
+<div class="instruct"><h3>Digite o CPF do Pensionista</h3></div>
+    <div class="form-inputs bckgrd">
             <form method="POST" action="search.php">
-                <p>Digite o CPF do Pensionista:</p>
                 <input type="text" name="cpf" placeholder="Somente números">
                 <input class="button" type="submit" value="Listar">
             </form>
     </div> 
-    </div>  
+    </>  
 </div>
 </body>
 </html>
