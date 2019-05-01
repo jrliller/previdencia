@@ -21,10 +21,10 @@ class Pensioner {
         }
     }
 
-    public function addPensioner($nome, $sobrenome, $cpf, $ender, $fone, $email, $salario, $data_pag, $tipo, $emprest, $parcelas, $valor){
+    public function addPensioner($nome, $sobrenome, $cpf, $ender, $fone, $email, $salario, $data_pag){
         if($this->checkPensioner($cpf) == false){
-            $sql = "INSERT INTO pensionista(nome, sobrenome, cpf, ender, fone, email, salario, data_pag, tipo, emprest, parcelas, valor) VALUES
-            (:nome, :sobrenome, :cpf, :ender, :fone, :email, :salario, :data_pag, :tipo, :emprest, :parcelas, :valor)";
+            $sql = "INSERT INTO pensionista(nome, sobrenome, cpf, ender, fone, email, salario, data_pag) VALUES
+            (:nome, :sobrenome, :cpf, :ender, :fone, :email, :salario, :data_pag)";
             $sql= $this->pdo->prepare($sql);
             $sql->bindValue(":nome", $nome);
             $sql->bindValue(":sobrenome", $sobrenome);
@@ -34,11 +34,24 @@ class Pensioner {
             $sql->bindValue(":email", $email);
             $sql->bindValue(":salario", $salario);
             $sql->bindValue(":data_pag", $data_pag);
-            $sql->bindValue(":tipo", $tipo);
-            $sql->bindValue(":emprest", $emprest);
-            $sql->bindValue(":parcelas", $parcelas);
-            $sql->bindValue(":valor", $valor);
+            // $sql->bindValue(":tipo", $tipo);
+            // $sql->bindValue(":emprest", $emprest);
+            // $sql->bindValue(":parcelas", $parcelas);
+            // $sql->bindValue(":valor", $valor);
             $sql->execute();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function checkPensioner($cpf){
+        $sql = "SELECT * FROM pensionista WHERE cpf = :cpf";
+        $sql = $this->pdo->prepare($sql);
+        $sql->bindValue(':cpf', $cpf);
+        $sql->execute();
+
+        if($sql->rowCount() > 0) {
             return true;
         } else {
             return false;
@@ -64,6 +77,7 @@ class Pensioner {
 
 
     public function getPensioner($cpf){
+
         $sql = "SELECT * FROM pensionista WHERE cpf = :cpf";
         $sql = $this->pdo->prepare($sql);
         $sql->bindValue(':cpf', $cpf);
@@ -71,13 +85,11 @@ class Pensioner {
 
         if($sql->rowCount() > 0 ){
             return $sql->fetch();
-           
         } else {
-            return array();
-         }   
+            echo "PENSIONISTA NÃO CADASTRADO!";
+            exit;
+        }   
     }
-
-
 
 
     public function getAll(){

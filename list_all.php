@@ -69,8 +69,7 @@ if(!isset($_SESSION['user']) && empty($_SESSION['user'])) {
                 </tr>
             <?php endforeach ?>
         </table>
-        </div>
-	</div>
+    </div>
 </div>
 </body>
 </html>
