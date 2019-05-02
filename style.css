@@ -3,19 +3,21 @@
 }
 
 .container {
-	background-image: linear-gradient(rgb(153, 195, 243), white);
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(rgb(206, 210, 214), rgb(240, 233, 233));
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
-	width: 100%;
 	/* overflow: hidden; */
 }
 
 .top {
-	background-color: #FFF;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	width:100%;
-	height: 70px;
+	height: 90px;
+	background-color: #1659BF;
 }
 
 .left_side{
@@ -31,16 +33,14 @@
 }
 
 .title {
-	margin: 0 auto;
 	display: flex;
-	width:100%;
-	font-size: 45px;
-	margin-bottom: 30px;
-	text-shadow: 1px 2px 2px rgb(5, 32, 107);
-	font-weight: bold;
 	justify-content: center;
+	align-items: center;
+	width:100%;
+	font-size: 40px;
+	text-shadow: 1px 2px 2px rgb(5, 32, 107);
 	padding-right: 70px;
-	color: #0073e6;
+	color: #ebeff3;
 }
 
 .sub_title {
@@ -62,7 +62,7 @@
 	align-items: center;
 	border-radius: 2px;
 	margin-top: 20px;
-	margin-left: 21px;
+	margin-left: 25px;
 	height: 35px;
 	max-width: 400px;
 	text-transform: uppercase;
@@ -72,8 +72,9 @@ nav {
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	width: 100%;
-	height: 40px;
+	height: 30px;
 	background-color: #1a75ff;
 	color: #FFF;
 	text-shadow: 2px 2px 4px #000;
@@ -126,26 +127,36 @@ nav ul {
 	height: 100vh;
 }
 
-.bckgrd{
-	background-color: #5693ee;
-}
+.form-list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 25%;
+	height: 100vh;
+	margin-left: 5px;
+	margin-bottom: 20px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;}
 
-.form-inputs {
+/* .form-inputs {
 	width:25%;
-	margin-left: 20px;
 	background-color: #5d8dd6;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	-ms-border-radius: 4px;
 	-o-border-radius: 4px;
-}
+} */
 
 .form-container{
 	display: flex;
 	justify-content: flex-start;
 	width: 40%;
-	margin-left: 20px;
+	height: 100%;
+	margin-left: 9px;
 	margin-bottom: 20px;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
@@ -217,7 +228,7 @@ form, input, textarea{
   align-items: center;
   font-size: 13px;
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px;
   margin: 5px 0;
   display: inline-block;
   border-radius: 5px;

@@ -35,15 +35,15 @@ if(!isset($_SESSION['user']) && empty($_SESSION['user'])) {
 	
 <div class="container">
 	<div class="instruct"><h3>Insira os dados do novo pensionista:</h3></div>	
-		<div class="form-container bckgrd">
+		<div class="form-container">
 			<form method="POST" action="add.submit.php">
 				<label for="nome">Nome do Pensionista</label>
 				<input type="text" name="nome" placeholder="Nome"><br><br>
-				<label for="sobrenome">Sobrenone</label>
+				<label for="sobrenome">Sobrenome</label>
 				<input type="text" name="sobrenome" placeholder="Sobrenome"> <br><br>
 				<label for="cpf">CPF</label>
 				<input type="number" name="cpf" placeholder="CPF do Pensionista"> <br><br>
-				<label for="ender">Endereço</label>
+				<label for="ender">Endereço Completo</label>
 				<textarea placeholder="Endereço" rows="5" cols="60" maxlength="100" minlenght="50" name="ender"></textarea></<br><br>
 				<label for="fone">Telefone</label>
 				<input type="number" name="fone" placeholder="Telefone"> <br><br>

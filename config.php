@@ -24,7 +24,7 @@ if(!isset($_SESSION['user']) && empty($_SESSION['user'])) {
 			<div class="logo"><img src="logo.png"></div>
 		</div>
 			<div class="title">
-                <div class="option">Dados do Pensionista</div>
+                <div class="option">Índices e Salários</div>
             </div>
 	</div>
 	    <nav>

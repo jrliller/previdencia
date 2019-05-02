@@ -21,7 +21,7 @@ session_start();
 		<div class="title">PREVIDÊNCIA ROCHEDO - MS</div>
 	</div>
 	
-	<div class="sub_title">Bem Vindo ao Controle de Pensionistas da Previdência de Rochedo - MS</div>
+	<!-- <div class="sub_title">Bem Vindo ao Controle de Pensionistas da Previdência de Rochedo - MS</div> -->
 
 	<div class="main" background="fundo1.png">
 		<div class="login">

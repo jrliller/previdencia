@@ -17,33 +17,32 @@ if(!isset($_SESSION['user']) && empty($_SESSION['user'])) {
 </head>
 <body>
 
-	<div class="top">
-		<div class="left_side">
-			<div class="logo"><img src="logo.png"></div>
-		</div>
-			<div class="title">
-                <div class="option">Dados do Pensionista</div>
-            </div>
+<div class="top">
+	<div class="left_side">
+		<div class="logo"><img src="logo.png"></div>
 	</div>
-	    <nav>
-			<ul>
-                <li><a href="list.php">Pesquisar Pensionista</a></li>
-                <li><a href="list_all.php">Listar Pensionistas</a></i>
-                <li><a href="add.php">Novo Pensionista</a></li>
-                <li><a href="config.php">Indices e Salários</a></li>
-                <li><a href="logout.php">Sair</a></li>
-			</ul>
-        </nav>
-
-<div class="container">
-<div class="instruct"><h3>Digite o CPF do Pensionista</h3></div>
-    <div class="form-inputs bckgrd">
-            <form method="POST" action="search.php">
-                <input type="text" name="cpf" placeholder="Somente números">
-                <input class="button" type="submit" value="Listar">
-            </form>
-    </div> 
-    </>  
+		<div class="title">
+            <div class="option">Pesquisar Pensionista</div>
+        </div>
 </div>
+<nav>
+	<ul>
+        <li><a href="list.php">Pesquisar Pensionista</a></li>
+        <li><a href="list_all.php">Listar Pensionistas</a></i>
+        <li><a href="add.php">Novo Pensionista</a></li>
+        <li><a href="config.php">Indices e Salários</a></li>
+        <li><a href="logout.php">Sair</a></li>
+	</ul>
+</nav>
+<div class="container">
+	<div class="instruct"><h3>Digite o CPF do Pensionista</h3></div>
+	<div class="form-list">	
+		<form method="POST" action="search.php">
+			<label for="cpf">CPF do Pensionista</label>
+			<input type="text" name="cpf" placeholder="Somente números">
+			<input class="button" type="submit" value="Listar">
+		</form>
+	</div>
+</div> 
 </body>
 </html>

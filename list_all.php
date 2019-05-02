@@ -18,7 +18,6 @@ if(!isset($_SESSION['user']) && empty($_SESSION['user'])) {
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div class="container">
 	<div class="top">
 		<div class="left_side">
 			<div class="logo"><img src="logo.png"></div>
@@ -26,7 +25,8 @@ if(!isset($_SESSION['user']) && empty($_SESSION['user'])) {
 			<div class="title">
                 <div class="option">Lista de Pensionistas</div>
             </div>
-	</div>
+    </div>
+    <div class="container">
 	    <nav>
 			<ul>
                 <li><a href="list.php">Pesquisar Pensionista</a></li>
