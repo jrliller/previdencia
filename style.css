@@ -1,5 +1,5 @@
-*{
-	font-family: Arial;
+* {
+	font-family: "open_sansregular", Helvetica, sans-serif;
 }
 
 .container {
@@ -78,6 +78,7 @@ nav {
 	background-color: #1a75ff;
 	color: #FFF;
 	text-shadow: 2px 2px 4px #000;
+	font-weight: bold;
 	background:-webkit-gradient(linear, left top, left bottom, from( #5693ee), to(#033177));
 	background:-moz-linear-gradient(top, #5693ee, #033177);
 	background:linear-gradient(-180deg, #5693ee, #033177);
@@ -89,8 +90,10 @@ nav a{
 }
 
 nav a:hover{
-	color: blue;
-	background-color: #FFF;
+	color: rgb(219, 219, 231);
+	background-color: rgb(3, 6, 63);
+	text-shadow: none;
+	font-weight: bold;
 	height: 20px;
 	padding: 3px;
 	border-radius: 2px;
@@ -118,9 +121,9 @@ nav ul {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-image: url("fundo2.png");
+	/* background-image: url("fundo2.png");
 	background-repeat: no-repeat;
-	background-size: cover; 
+	background-size: cover;  */
 	align-items: center;
 	margin-top: 10px;
 	width:100vw;

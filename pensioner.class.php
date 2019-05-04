@@ -67,8 +67,6 @@ class Pensioner {
         $sql->execute();
     }
 
-
-
     public function updateSalary($id, $salario, $emprest, $percent){
         $sql = "UPDATE pensionista SET $";
     }
@@ -77,20 +75,20 @@ class Pensioner {
 
 
     public function getPensioner($cpf){
+        if($this->checkPensioner($cpf) == true){
+            $sql = "SELECT * FROM pensionista WHERE cpf = :cpf";
+            $sql = $this->pdo->prepare($sql);
+            $sql->bindValue(':cpf', $cpf);
+            $sql->execute();
 
-        $sql = "SELECT * FROM pensionista WHERE cpf = :cpf";
-        $sql = $this->pdo->prepare($sql);
-        $sql->bindValue(':cpf', $cpf);
-        $sql->execute();
-
-        if($sql->rowCount() > 0 ){
-            return $sql->fetch();
-        } else {
-            echo "PENSIONISTA NÃO CADASTRADO!";
-            exit;
-        }   
+                if($sql->rowCount() > 0 ){
+                    return $sql->fetch();
+                } 
+    } else {
+        header("Location: list.php");
+        exit;
     }
-
+}
 
     public function getAll(){
         $sql = "SELECT * FROM pensionista";

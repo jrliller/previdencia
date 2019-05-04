@@ -18,7 +18,7 @@ session_start();
 			<div class="logo" ><img src="logo.png"></div>
 		</div>
 		
-		<div class="title">PREVIDÊNCIA ROCHEDO - MS</div>
+		<div class="title">PREVIDÊNCIA PRIVADA</div>
 	</div>
 	
 	<!-- <div class="sub_title">Bem Vindo ao Controle de Pensionistas da Previdência de Rochedo - MS</div> -->

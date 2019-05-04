@@ -19,7 +19,7 @@ if(!isset($_SESSION['user']) && empty($_SESSION['user'])) {
 		<div class="left_side">
 			<div class="logo" ><img src="logo.png"></div>
 		</div>
-			<div class="title">PREVIDÊNCIA ROCHEDO - MS</div>
+			<div class="title">PREVIDÊNCIA PRIVADA</div>
 	</div>
 	<nav>
 		<ul>
@@ -30,7 +30,10 @@ if(!isset($_SESSION['user']) && empty($_SESSION['user'])) {
             <li><a href="logout.php">Sair</a></li>
 		</ul>
 		</nav>		
-	<div class="main" background="fundo1.png"></div>
+	<div class="main">
+	
+	...
+	</div>
 	</div>
 </div>
 </body>

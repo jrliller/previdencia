@@ -1,14 +1,11 @@
 <?php
 session_start();
 $_SESSION["cpf"] = $_POST["cpf"];
-
 include 'pensioner.class.php';
 $pensioner = new Pensioner();
-
 if(!isset($_SESSION['user']) && empty($_SESSION['user'])) {
 	header("Location: login.php");
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -45,13 +42,11 @@ if(!isset($_SESSION['user']) && empty($_SESSION['user'])) {
     $cpf = $_POST['cpf'];
     $info = $pensioner->getPensioner($cpf);
     } else {
-        echo "PENSIONISTA NÃO CADASTRADO2!";
-        exit;
+        header("Location:list.php");
     }
 ?>
 
 <table class="listing">
-
     <tr>
         <th>Nome:</th>
         <td><?php echo $info['nome']; ?></td>
