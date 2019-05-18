@@ -17,7 +17,7 @@ if(!isset($_SESSION['user']) && empty($_SESSION['user'])) {
 <div class="container">
 	<div class="top">
 		<div class="left_side">
-			<div class="logo" ><img src="logo.png"></div>
+			<div class="logo" ><a href="index.php"><img src="logo.png"></a></div>
 		</div>
 			<div class="title">PREVIDÊNCIA PRIVADA</div>
 	</div>
